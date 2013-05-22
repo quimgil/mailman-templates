@@ -210,12 +210,13 @@
         <div class="box-content" id="subscribe">
           <h3 class="title title01">Subscribe</h3>
           <MM-Subscribe-Form-Start> 
-          <p>Your e-mail address:   <MM-Subscribe-Box></p> 
-          <p>Your name (optional):   <mm-fullname-box></p> 
+          <table>
+            <tr><td>Your e-mail address:</td><td><MM-Subscribe-Box></td></tr> 
+            <tr><td>Your name (optional):</td><td><mm-fullname-box></td></tr>
+          </table> 
           <p><MM-Reminder></p>
-          <p><mm-digest-question-start> Would you like to receive list mail batched in a daily digest?<br /> 
-            <center> <MM-Undigest-Radio-Button> No <MM-Digest-Radio-Button>  Yes </center></p> 
-          <p><mm-digest-question-end></p>
+          <p><mm-digest-question-start> Would you like to receive list mail batched in a daily digest? 
+          <MM-Undigest-Radio-Button> No <MM-Digest-Radio-Button>  Yes <mm-digest-question-end></p>
           <p style="text-align: center"><MM-Subscribe-Button><MM-Form-End></p>
         </div>
         <div class="box-content" id="manage">
