@@ -183,12 +183,10 @@
         background: url(//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Filing_cabinet_icon.svg/40px-Filing_cabinet_icon.svg.png) no-repeat left top;
       }
       .title03 {
-        background: url(//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/WMF-Agora-Settings_424242.svg/40px-WMF-Agora-Settings_424242.svg.png
-) no-repeat left top;
+        background: url(//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/WMF-Agora-Settings_424242.svg/40px-WMF-Agora-Settings_424242.svg.png) no-repeat left top;
       }
      .title04 {
-        background: url(///upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Wiki-broom.svg/40px-Wiki-broom.svg.png
-) no-repeat left top;
+        background: url(//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Wiki-broom.svg/40px-Wiki-broom.svg.png) no-repeat left top;
       }
     </style>
   </head>
@@ -213,14 +211,24 @@
           <table>
             <tr><td>Your e-mail address:</td><td><MM-Subscribe-Box></td></tr> 
             <tr><td>Your name (optional):</td><td><mm-fullname-box></td></tr>
+            <!-- Part of the multilingual selector below -->
+            <!-- <tr><td>Preferred language:</td><td><MM-list-langs></td></tr> -->
           </table> 
           <p><MM-Reminder></p>
           <p><mm-digest-question-start> Would you like to receive list mail batched in a daily digest? 
           <MM-Undigest-Radio-Button> No <MM-Digest-Radio-Button>  Yes <mm-digest-question-end></p>
+          <!-- MM-List-Subscription-Msg gives extra details about the subscription rules of the list -->
+          <!-- This is optional, and will include variations between subscription rules (confirm vs confirm and approve) -->
+          <!-- On the majority of lists this can be commented out as subscription rules will simply be confirm -->
+          <MM-List-Subscription-Msg>
           <p style="text-align: center"><MM-Subscribe-Button><MM-Form-End></p>
         </div>
         <div class="box-content" id="manage">
           <h3 class="title title03">Unsubscribe / settings</h3>
+          <!-- MM-Roster-Form gives easy access to the subscribers list from the main list info page -->
+          <!-- You can comment the line below out for when you don't need to give access to the susbcribers list --> 
+          <!-- For example for announcement mailing lists or mailing lists with a large number of subscribers  --> 
+          <p><MM-Roster-Form-Start><MM-Roster-Option><MM-Form-End></p>
           <p><MM-Options-Form-Start><MM-Editing-Options><MM-Form-End></p>
         </div>
         <div class="box-content" id="admins">
